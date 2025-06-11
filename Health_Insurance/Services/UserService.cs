@@ -18,6 +18,8 @@ namespace Health_Insurance.Services
 
         public string HashPassword(string password)
         {
+            Console.WriteLine("hashed password is :");
+            Console.WriteLine(BCrypt.Net.BCrypt.HashPassword(password));
             return BCrypt.Net.BCrypt.HashPassword(password);
         }
 
@@ -31,6 +33,7 @@ namespace Health_Insurance.Services
             if (loginType == "Admin")
             {
                 var admin = await _context.Admins.FirstOrDefaultAsync(a => a.Username == username);
+                //Console.WriteLine(password);
                 if (admin != null && VerifyPassword(password, admin.PasswordHash))
                 {
                     return admin;

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Health_Insurance.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250609103227_AddHRTable")]
-    partial class AddHRTable
+    [Migration("20250610041258_added_seed_data_admin_")]
+    partial class added_seed_data_admin_
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
